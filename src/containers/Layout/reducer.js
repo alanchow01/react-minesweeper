@@ -8,7 +8,7 @@ const minesweeperReducer = (state = defaultStore, action = { type: "" }) => {
   switch (action.type) {
     case "RESET_GAME": {
       const boardSize = 16;
-      const mineLocations = boardHelpers.generateMines(boardSize, 4);
+      const mineLocations = boardHelpers.generateMines(boardSize, 40);
       const board = boardHelpers.resetGame(boardSize, mineLocations);
       return { ...state, board };
     }
